@@ -1,0 +1,77 @@
+
+> api-tests@1.0.0 test
+> mocha
+
+
+
+  Account Negative Tests
+    ✔ POST Account Without Username (326ms)
+    ✔ POST Account Without Password (287ms)
+    ✔ POST Account Without Username and Password (250ms)
+    ✔ POST Account With Username and short Password (251ms)
+
+  Account Creation Test
+    ✔ POST Account (394ms)
+    ✔ Check Account Exists (336ms)
+    ✔ POST Authorized Account (312ms)
+    ✔ POST Generate Token (536ms)
+
+  Add Book to Wishlist
+    ✔ POST Book to Wishlist (278ms)
+    ✔ POST Book wrong ISBN to Wishlist (306ms)
+
+  Replace Book
+{ code: '1200', message: 'User not authorized!' }
+    1) PUT Book
+
+  Book Pages
+    ✔ Validate Pages of Book with ISBN
+
+  Delete Book
+{ code: '1200', message: 'User not authorized!' }
+    2) Delete Book
+{ code: '1200', message: 'User not authorized!' }
+    3) Delete Wrong ISBN Book
+
+
+  11 passing (4s)
+  3 failing
+
+  1) Replace Book
+       PUT Book:
+
+      AssertionError: expected 401 to equal 200
+      + expected - actual
+
+      -401
+      +200
+      
+      at C:\Users\nik99\api-tests\test\/Account.js:185:35
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+  2) Delete Book
+       Delete Book:
+
+      AssertionError: expected 401 to equal 204
+      + expected - actual
+
+      -401
+      +204
+      
+      at C:\Users\nik99\api-tests\test\/Account.js:219:35
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+  3) Delete Book
+       Delete Wrong ISBN Book:
+
+      AssertionError: expected 401 to equal 204
+      + expected - actual
+
+      -401
+      +204
+      
+      at C:\Users\nik99\api-tests\test\/Account.js:237:35
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
+
